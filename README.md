@@ -4,7 +4,7 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"  width="275rem" height="255rem"></a>
 </p>
 
-## WWC - WebWave Creations
+## EcoIA - Games
 
 <p align="center">
 <img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px">
@@ -30,7 +30,7 @@
 ## 💬 Descrição do Projeto
 
 <p align="center">
-<img src="/" alt="Cem Vezes Mais" border="0" width="300rem" height="300rem">
+<img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px">
 -
 </p>
 
