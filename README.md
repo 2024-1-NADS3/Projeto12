@@ -13,7 +13,7 @@
 
 <b> Integrantes: </b>
 
-<a href="/"Guilherme</a>
+<a href="/">Guilherme</a>
 <br>
 <a href="/">Lorena</a>
 <br>
