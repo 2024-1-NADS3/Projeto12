@@ -46,8 +46,8 @@ O projeto Eco IA Game tem a missão de, por meio da gameficação, ajudar na tra
 <b>Back-end</b>
 
 - Android Studio: Ferramenta para codificação e desenvolvimento de aplicativos para a o sistema operacional Android.
-
 - SQLite: Banco de dados.
+- Codesandbox: Servidor.
 
 <b>UX/UI Design</b>
 
@@ -68,7 +68,7 @@ O projeto Eco IA Game tem a missão de, por meio da gameficação, ajudar na tra
 - Recomendamos o uso: Android 5.1 lollipop
 - Recomendamos o uso: Emulador: Pixel 5 API 22
 
-## 🗃 Histórico de lançamentos
+## 🗃 Histórico de lançamentos (em atualização...)
 
 - 0.0.1 - 01/02/2024
   - ATUALIZAÇÃO: Início do protótipo no figma.
@@ -110,3 +110,5 @@ Aqui estão as referências usadas no projeto.
 1. <https://developer.android.com/develop?hl=pt-brs>
 2. <https://dev.java/learn/getting-started/>
 3. <https://www.sqlite.org/docs.html>
+4. <https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html>
+5. <https://jsdoc.app/about-getting-started>
