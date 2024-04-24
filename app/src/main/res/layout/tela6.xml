@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cenario11">
+
+
+    <LinearLayout
+        android:id="@+id/principal"
+        android:layout_width="160dp"
+        android:layout_height="215dp"
+        android:layout_gravity="center|clip_vertical|left"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#00142A49">
+
+        <ImageView
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/bottle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topleft"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#00142A49">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/brown_garbage_collector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topright"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="195dp"
+        android:layout_marginRight="20dp"
+        android:background="#00142A49">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/green_garbage_collector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomleft"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="375dp"
+        android:layout_marginRight="20dp"
+        android:background="#00142A49">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/red_garbage_collector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomright"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="555dp"
+        android:layout_marginRight="20dp"
+        android:background="#00142A49">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/white_garbage_collector" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cenario5">
+
+    <TextView
+        android:id="@+id/textErro1"
+        android:layout_width="355dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="24dp"
+        android:text="Poxa não foi dessa vez. A cor dos coletores de Pláticos é a cor vermelha."
+        android:textAlignment="center"
+        android:textColor="#E4E4E4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/textErro2"
+        android:layout_width="350dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="40dp"
+        android:background="#A6FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:text="A cor vermelha é utilizada para representar os coletores de resíduos de plástico devido à padronização das cores da coleta seletiva. "
+        android:textAlignment="center"
+        android:textColor="#070000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textErro1" />
+
+    <TextView
+        android:id="@+id/textErro3"
+        android:layout_width="362dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="16dp"
+        android:background="#A6FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:text="Cada cor em um recipiente de coleta seletiva corresponde a um tipo específico de resíduo, facilitando a separação e reciclagem adequada dos materiais. No caso do vermelho, ele é associado ao plástico, indicando que esse recipiente é destinado para o descarte desse tipo de material."
+        android:textAlignment="center"
+        android:textColor="#040000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textErro2" />
+
+    <TextView
+        android:id="@+id/textErro4"
+        android:layout_width="355dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="24dp"
+        android:background="#A6FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:text="Essa prática contribui para a conscientização ambiental, promovendo a correta disposição dos resíduos e favorecendo os processos de reciclagem."
+        android:textAlignment="center"
+        android:textColor="#0B0000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textErro3" />
+
+    <Button
+        android:id="@+id/buttonGo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:fontFamily="@font/poppins"
+        android:onClick="onClick"
+        android:text="Continuar"
+        android:textColor="#34CB79"
+        android:textStyle="bold"
+        app:backgroundTint="#142A49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textErro4" />
+
+    <Button
+        android:id="@+id/buttonBack6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Tentar novamente"
+        android:textColor="#E66464"
+        app:backgroundTint="#142A49"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGo6"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textErro4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
