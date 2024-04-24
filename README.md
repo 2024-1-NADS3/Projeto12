@@ -7,7 +7,7 @@
 ## WWC - WebWave Creations
 
 <p align="center">
-<img src="Imagens/Logo/jpg.jfif" alt="WWC" border="0"  width="350px" height="275px">
+<img src="[Imagens/Logo/jpg.jfif](https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true)" alt="WWC" border="0"  width="350px" height="275px">
 -
 </p>
 
