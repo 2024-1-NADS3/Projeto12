@@ -57,7 +57,8 @@ public class screen2_login extends AppCompatActivity {
                     Intent in = new Intent(screen2_login.this, screen3_welcome.class);
                     startActivity(in);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Por favor, preencha todos os campos" +
+                            ".", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -74,19 +75,22 @@ public class screen2_login extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 // Tratar a resposta do servidor, se necessário
                 Log.d("Response", response.toString());
-                Toast.makeText(getApplicationContext(), "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Dados cadastrados com sucesso!",
+                        Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // Tratar erros de comunicação com o servidor
                 Log.e("Error", error.toString());
-                Toast.makeText(getApplicationContext(), "Erro ao cadastrar dados. Por favor, tente novamente.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Erro ao cadastrar dados. Por favor, " +
+                        "tente novamente.", Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
