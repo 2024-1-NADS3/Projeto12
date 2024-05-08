@@ -17,86 +17,151 @@
         android:theme="@style/Theme.EcoGame"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
-            android:name=".Tela3congratsc"
+            android:name=".screen6_game1"
             android:exported="false" />
         <activity
-            android:name=".Tela3congratsb"
+            android:name=".screen4_wingame4"
             android:exported="false" />
         <activity
-            android:name=".Tela3congratsa"
+            android:name=".screen4_wingame3"
             android:exported="false" />
         <activity
-            android:name=".Tela4"
+            android:name=".screen4_wingame2"
             android:exported="false" />
         <activity
-            android:name=".Tela3errorc"
+            android:name=".screen5_endstep"
             android:exported="false" />
         <activity
-            android:name=".Tela3errorb"
+            android:name=".screen4_lostgame4"
             android:exported="false" />
         <activity
-            android:name=".Tela3errora"
+            android:name=".screen4_lostgame3"
             android:exported="false" />
         <activity
-            android:name=".Tela3c"
+            android:name=".screen4_lostgame2"
             android:exported="false" />
         <activity
-            android:name=".Tela3b"
+            android:name=".screen4_game4"
             android:exported="false" />
         <activity
-            android:name=".Tela3a"
+            android:name=".screen4_game3"
             android:exported="false" />
         <activity
-            android:name=".Tela11"
+            android:name=".screen4_game2"
             android:exported="false" />
         <activity
-            android:name=".Tela10b"
+            android:name=".screen12_endgame"
             android:exported="false" />
         <activity
-            android:name=".Tela10a"
+            android:name=".screen10_updatedata"
             android:exported="false" />
         <activity
-            android:name=".Tela6e"
+            android:name=".screen9_confirmdata"
             android:exported="false" />
         <activity
-            android:name=".Tela1"
+            android:name=".screen6_lostgame1"
             android:exported="false" />
         <activity
-            android:name=".Tela6d"
+            android:name=".screen6_lostgame2"
             android:exported="false" />
         <activity
-            android:name=".Tela10"
+            android:name=".screen6_lostgame3"
             android:exported="false" />
         <activity
-            android:name=".Tela9"
+            android:name=".screen6_lostgame4"
             android:exported="false" />
         <activity
-            android:name=".Tela8"
+            android:name=".screen2_login"
             android:exported="false" />
         <activity
-            android:name=".Tela7"
+            android:name=".screen6_game3"
             android:exported="false" />
         <activity
-            android:name=".Tela6B"
+            android:name=".screen6_game2"
             android:exported="false" />
         <activity
-            android:name=".Tela6"
+            android:name=".screen6_game4"
             android:exported="false" />
         <activity
-            android:name=".Tela3congrats"
+            android:name=".screen6_wingame1"
             android:exported="false" />
         <activity
-            android:name=".Tela3error"
+            android:name=".screen6_wingame2"
             android:exported="false" />
         <activity
-            android:name=".Tela3"
+            android:name=".screen6_wingame3"
             android:exported="false" />
         <activity
-            android:name=".Tela2"
+            android:name=".screen6_wingame4"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".screen11_certificate"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_game1"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_game2"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_game3"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_game4"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_wingame1"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_wingame2"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_wingame3"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_wingame4"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_lostgame1"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_lostgame2"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_lostgame3"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_lostgame4"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_video1"
+            android:exported="false" />
+        <activity
+            android:name=".screen7_endstep"
+            android:exported="false" />
+        <activity
+            android:name=".screen6_game3"
+            android:exported="false" />
+        <activity
+            android:name=".screen6_game2"
+            android:exported="false" />
+        <activity
+            android:name=".screen4_wingame1"
+            android:exported="false" />
+        <activity
+            android:name=".screen4_lostgame1"
+            android:exported="false" />
+        <activity
+            android:name=".screen4_game1"
+            android:exported="false" />
+        <activity
+            android:name=".screen3_welcome"
+            android:exported="false" />
+
+        <activity
+            android:name=".screen1_startgame"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
