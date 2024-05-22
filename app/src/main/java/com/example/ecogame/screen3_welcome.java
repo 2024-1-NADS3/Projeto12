@@ -18,6 +18,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javax.crypto.Cipher;
+
 public class screen3_welcome extends AppCompatActivity {
     private Button botaoVoltar;
     private Button botaoContinuar;
