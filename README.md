@@ -73,7 +73,7 @@ npm install dotenv
 - Recomendamos o uso: Android 5.1 lollipop
 - Recomendamos o uso: Emulador: Pixel 5 API 22
 
-## 🗃 Histórico de lançamentos (em atualização...)
+## 🗃 Histórico de lançamentos
 
 - 0.0.1 - 01/02/2024
   - ATUALIZAÇÃO: Início do protótipo no figma.
