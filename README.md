@@ -37,7 +37,7 @@ O Eco-ia Game oferece uma experiência completa de aprendizado e diversão, ince
 <b>Junte-se à Aventura da Reciclagem!</b> <br>
 Baixe agora o Eco-ia Game e embarque nessa jornada emocionante rumo a um futuro mais verde e sustentável!
 
-## 🛠️ Desenvolvimento
+## 🛠 Instalação
 
 <b>Front-end</b>
 
@@ -60,6 +60,7 @@ Baixe agora o Eco-ia Game e embarque nessa jornada emocionante rumo a um futuro 
 2- Para abrir o servidos deste projeto você necessita fazer a instalção das seguintes ferramentas:
 - <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">NodeJS v16.13.0</a><br>
 ```
+--> Pode ser necessário realizar a instalação das seguintes dependências:
 npm install express
 npm install body-parser
 npm install nodemailer
@@ -67,15 +68,6 @@ npm install sqlite3
 npm install crypto
 npm install dotenv
 ```
---> Pode ser necessário realizar a instalação das seguintes dependências:
-  --> npm install express
-  --> npm install body-parser
-  --> npm install body-parser
-  --> npm install nodemailer
-  -->npm install sqlite3
-  --> npm install crypto
-  --> npm install dotenv
-
 <b>Outras configurações</b>
 
 - Recomendamos o uso: Android 5.1 lollipop
