@@ -4,15 +4,12 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"  width="275rem" height="255rem"></a>
 </p>
 
-## EcoIA - Games
-
-<p align="center">
-<img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px">
--
-</p>
-
-<b> Integrantes: </b>
-
+# EcoIA - Games
+<br>
+## Grupo 12
+<br>
+##Integrantes: 
+<br>
 <a href="/">Guilherme Medeiros</a>
 <br>
 <a href="/">Lorena Bernardo</a>
@@ -21,20 +18,28 @@
 <br>
 <a href="/">Paulo Carvalho</a>
 
-## Professores Orientadores:
-
-<a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente</a>
-<br>
-<a href="https://github.com/VictorRosetti">Victor Rosetti</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente</a>,<a href="https://github.com/VictorRosetti">Victor Rosetti</a>
 
 ## 💬 Descrição do Projeto
 
 <p align="center">
-<img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px">
--
-</p>
-
-O projeto Eco IA Game tem a missão de, por meio da gameficação, ajudar na transformação de comportamento da sociedade, por meio da concientização de crianças e pré adolescentes. Nosso aplicativo possui o objetivo de maximizar a disseminação de informações referentes a reciclagem e o impacto das mudanças climáticas no meio ambiente, fazendo com que o mesmo possa alcançar uma maior visibilidade em prol da causa.
+<img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px"></p>
+###Eco-ia Game: Aventura da Reciclagem para Crianças!
+Embarque em uma jornada emocionante pelo mundo da reciclagem com o Eco-ia Game, um jogo educativo e divertido projetado especialmente para rianças!
+###Desvende o Mundo da Reciclagem:
+No Eco-ia Game, as crianças exploram um mundo colorido e interativo, onde aprendem sobre a importância da reciclagem e como ela ajuda a proteger o meio ambiente. Com desafios empolgantes, a diversão e o aprendizado andam de mãos dadas.
+###Mini Games Divertidos e Educativos:
+• Desafio das Lixeiras: Teste seus conhecimentos sobre reciclagem separando o lixo corretamente nas lixeiras coloridas.
+• Trilha Ecológica: Escolha o lixo e descubra qual é a lixeira correta, para ganhar pontos e aprender mais sobre os tipos de reciclagem que existem!
+• Desafio do Vídeo: Assista os vídeos e responda as perguntas para ajudar a limpar o meio ambiente e proteger os animais.
+###Recursos Interativos:
+• Gráficos Coloridos e Animados: Explore um mundo vibrante e cheio de vida, com cenários e personagens encantadores.
+• Trilha Sonora Divertida: Curta músicas animadas e efeitos sonoros divertidos que tornam a experiência ainda mais empolgante.
+• Sistema de Recompensas: Ganhe recompensas e alcance o top 1 no ranking global.
+###Aprendizado e Diversão em um Só Lugar:
+O Eco-ia Game oferece uma experiência completa de aprendizado e diversão, incentivando as crianças a se tornarem verdadeiros defensores do meio ambiente. Com uma abordagem lúdica e interativa, o jogo desperta a consciência ambiental e promove a adoção de hábitos sustentáveis desde cedo.
+###Junte-se à Aventura da Reciclagem!
+Baixe agora o Eco-ia Game e embarque nessa jornada emocionante rumo a um futuro mais verde e sustentável!
 
 ## 🛠️ Desenvolvimento
 
