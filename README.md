@@ -88,22 +88,28 @@ npm install dotenv
 - 0.3.0 - 15/04/2024
   - Revisão do projeto.
   - Trabalho na reta final.
-- 0.3.1 - 30/04/2024
+- 0.3.0 - 30/04/2024
+  - Configurações finais.
+  - Documentação acadêmica.
+- 0.3.1 - 15/05/2024
   - Revisão e finalização do aplicativo.
+- 0.3.1 - 15/05/2024
   - Trabalho finalizado.
-
+    
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
 |<br>
 |-->documentos<br>
-&emsp;|-->Design (o negócio q o Chico pediu)<br>
-&emsp;|-->GRUPO 13 - outros docs que os professores pediram...<br>
-&emsp;|-->formulário preenchido (o q está no moddle)<br>
+  &emsp;|-->atividades<br>
+  &emsp;|--> backend/out<br>
+  &emsp;|-->frontend/javadocs<br>
+  &emsp;|-->Projetos_de_Extensão-grupo12.pdf<br>
+  &emsp;|-->Projetos_de_Extensão-grupo12.docx<br>
 |-->imagens<br>
 |-->src<br>
-&emsp;|-->Backend<br>
-&emsp;|-->Frontend<br>
+  &emsp;|-->Backend<br>
+  &emsp;|-->Frontend<br>
 |readme.md<br>
 
 ## 📋 Licença/License
