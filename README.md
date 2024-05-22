@@ -13,9 +13,8 @@
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente</a> e <a href="https://github.com/VictorRosetti">Victor Rosetti</a>
 
 ## 💬 Descrição do Projeto
-
-
-<img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px">
+<p align="center">
+<img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px"></p>
 ###Eco-ia Game: Aventura da Reciclagem para Crianças!
 Embarque em uma jornada emocionante pelo mundo da reciclagem com o Eco-ia Game, um jogo educativo e divertido projetado especialmente para rianças!
 <b>Desvende o Mundo da Reciclagem:</b>b>
