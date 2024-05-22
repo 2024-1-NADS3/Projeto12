@@ -102,7 +102,7 @@ npm install dotenv
 |<br>
 |-->documentos<br>
   &emsp;|-->atividades<br>
-  &emsp;|--> backend/out<br>
+  &emsp;|-->backend/out<br>
   &emsp;|-->frontend/javadocs<br>
   &emsp;|-->Projetos_de_Extensão-grupo12.pdf<br>
   &emsp;|-->Projetos_de_Extensão-grupo12.docx<br>
