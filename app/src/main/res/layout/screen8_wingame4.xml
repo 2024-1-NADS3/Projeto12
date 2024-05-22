@@ -4,84 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screen8_wingame1"
-    android:background="@drawable/cenario6">
+    android:background="@drawable/fundo16"
+    tools:context=".screen8_wingame1">
 
     <TextView
         android:id="@+id/textView1S8GameWin4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="377dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="492dp"
         android:fontFamily="@font/poppins"
-        android:text="Parabéns, você sabe muito!! "
+        android:text="Parabéns, você acertou! "
         android:textAlignment="center"
-        android:textColor="#E4E4E4"
-        android:textSize="20sp"
+        android:textColor="#103653"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGo6S8GameWin4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
-
-    <TextView
-        android:id="@+id/textView2S8GameWin4"
-        android:layout_width="367dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="40dp"
-        android:background="#A6FFFFFF"
-        android:fontFamily="@font/poppins"
-        android:text="A cor vermelha é utilizada para representar os coletores de resíduos de plástico devido à padronização das cores da coleta seletiva. "
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1S8GameWin4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3S8GameWin4"
         android:layout_width="357dp"
         android:layout_height="203dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="36dp"
         android:background="#A6FFFFFF"
         android:fontFamily="@font/poppins"
-        android:text="Cada cor em um recipiente de coleta seletiva corresponde a um tipo específico de resíduo, facilitando a separação e reciclagem adequada dos materiais. No caso do vermelho, ele é associado ao plástico, indicando que esse recipiente é destinado para o descarte desse tipo de material."
+        android:text="Sabia que o descarte correto de lixo, pode evitar alagamentos pela cidade em dias de fortes chuvas! O lixo quando é jogado nas ruas, pode tampar os escoamentos de água, como os bueiros."
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2S8GameWin4" />
-
-    <TextView
-        android:id="@+id/textView4S8GameWin4"
-        android:layout_width="362dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="64dp"
-        android:background="#A6FFFFFF"
-        android:fontFamily="@font/poppins"
-        android:text="Vamos seguir testando seus conhecimentos na próxima etapa."
-        android:textAlignment="center"
-        android:textColor="#0B0909"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3S8GameWin4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1S8GameWin4" />
 
     <Button
         android:id="@+id/buttonGo6S8GameWin4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_width="114dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="79dp"
+        android:background="#D74842"
         android:onClick="onClick"
         android:text="Próximo"
-        android:textColor="#34CB79"
-        android:textSize="16sp"
-        app:backgroundTint="#142A49"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:backgroundTint="#D74842"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4S8GameWin4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1S8GameWin4" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="379dp"
+        android:layout_height="358dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/lixoorganico"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3S8GameWin4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

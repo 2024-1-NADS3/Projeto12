@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -33,6 +34,7 @@ public class screen4_game2 extends AppCompatActivity {
     private Button botaoAzul;
     private Button botaoLaranja;
     private Button botaoback2;
+    private ImageButton imageButtonS4Game2;
     private int userId = -1;
 
     @Override
@@ -59,8 +61,8 @@ public class screen4_game2 extends AppCompatActivity {
         botaoAmarelo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveTrue(userId, true);
-                Intent in = new Intent(getApplicationContext(), screen4_wingame2.class);
+                saveTrue(userId, false);
+                Intent in = new Intent(getApplicationContext(), screen4_lostgame2.class);
                 startActivity(in);
             }
         });
@@ -70,8 +72,8 @@ public class screen4_game2 extends AppCompatActivity {
         botaoPreto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveFalse(userId,false);
-                Intent in = new Intent(getApplicationContext(), screen4_lostgame2.class);
+                saveFalse(userId,true);
+                Intent in = new Intent(getApplicationContext(), screen4_wingame2.class);
                 startActivity(in);
             }
         });
@@ -110,7 +112,16 @@ public class screen4_game2 extends AppCompatActivity {
         botaoback2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getApplicationContext(), screen3_welcome.class);
+                Intent in = new Intent(getApplicationContext(), screen4_game1.class);
+                startActivity(in);
+            }
+        });
+        //Return to the beginning of the level/stage
+        imageButtonS4Game2 = findViewById(R.id.imageButtonS4Game3);
+        imageButtonS4Game2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), screen1_startlogin.class);
                 startActivity(in);
             }
         });
@@ -118,7 +129,7 @@ public class screen4_game2 extends AppCompatActivity {
 
     // Função para consultar e salvar o último ID cadastrado na tabela "nomes"
     private void consultarUltimoId() {
-        String url = "https://nnn5h2-3000.csb.app/ultimo-id";
+        String url = "https://6xrrfz-3000.csb.app/ultimo-id";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -147,7 +158,7 @@ public class screen4_game2 extends AppCompatActivity {
     // Método para contabilizar "falso" no banco de dados
     private void saveFalse(int userId, boolean corB) {
         // URL para enviar a solicitação POST para o servidor
-        String url = "https://nnn5h2-3000.csb.app/usuarios/" + userId + "/cores";
+        String url = "https://6xrrfz-3000.csb.app/usuarios/" + userId + "/cores";
 
         // Objeto JSON com os dados a serem enviados
         JSONObject json = new JSONObject();
@@ -198,7 +209,7 @@ public class screen4_game2 extends AppCompatActivity {
     // Método para contabilizar "verdadeiro" no banco de dados
     private void saveTrue(int userId, boolean corB) {
         // Constrói o URL para enviar a solicitação POST para o servidor
-        String url = "https://nnn5h2-3000.csb.app/usuarios/" + userId + "/cores";
+        String url = "https://6xrrfz-3000.csb.app/usuarios/" + userId + "/cores";
 
         // Cria um objeto JSON com os dados a serem enviados
         JSONObject json = new JSONObject();

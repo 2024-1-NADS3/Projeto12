@@ -1,4 +1,4 @@
-/*
+/**
  *@description Importações e configurações
  *@version 1.0.0
  *@author Grupo 12
@@ -6,6 +6,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const sqlite3 = require("sqlite3").verbose();
+const crypto = require("crypto");
 
 const app = express();
 const port = process.env.PORT || 3000; // configuração da porta no servidor
@@ -20,14 +21,14 @@ const db = new sqlite3.Database("myapp.db", (err) => {
   }
   console.log('Conectado ao banco de dados SQLite "myapp.db"');
 
-  /*
+  /**
    *@description Criar a tabela "cores" caso ela não exista
    */
   db.run(
     "CREATE TABLE IF NOT EXISTS cores (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, " +
       "cor_a INTEGER, cor_b INTEGER, cor_c INTEGER, cor_d INTEGER, cor_e INTEGER, cor_f INTEGER, cor_g INTEGER, cor_h INTEGER, cor_i INTEGER, cor_j INTEGER, cor_k INTEGER, cor_l INTEGER)",
     () => {
-      /*
+      /**
        *@description Criar a tabela "nomes" caso ela não exista
        */
       db.run(
@@ -48,56 +49,134 @@ const db = new sqlite3.Database("myapp.db", (err) => {
 /*
  *=====================================Metodos Tabela Nomes - CRUD =========================================
  */
-/*
+/**
  *@description Cadastrar usuario
  */
+
+// Função para gerar um vetor de inicialização (IV) aleatório
+const gerarIVAleatorio = () => {
+  // Gera um vetor de 16 bytes (128 bits) de forma aleatória
+  return crypto.randomBytes(16);
+};
+
+// Rota para cadastrar usuário com dados criptografados
 app.post("/usuarios1", (req, res) => {
-  const { nome, nickname } = req.body;
-  const sql = "INSERT INTO nomes (nome, nickname) VALUES (?, ?)";
-  const params = [nome, nickname];
+  // Exibe o corpo da requisição recebida
+  console.log("Corpo da requisição:", req.body);
 
-  db.run(sql, params, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    res.status(201).json({ id: this.lastID, nome, nickname });
-  });
+  // Extrai os dados recebidos do corpo da requisição
+  const {
+    nome_criptografado,
+    nickname_criptografado,
+    chave_nome,
+    chave_nickname,
+    iv,
+  } = req.body;
+
+  // Exibe os dados recebidos para depuração
+  console.log("Dados recebidos:");
+  console.log("Nome criptografado:", nome_criptografado);
+  console.log("Nickname criptografado:", nickname_criptografado);
+  console.log("Chave nome:", chave_nome);
+  console.log("Chave nickname:", chave_nickname);
+  console.log("IV:", iv);
+
+  // Verifica se os dados recebidos são insuficientes
+  if (
+    !nome_criptografado ||
+    !nickname_criptografado ||
+    !chave_nome ||
+    !chave_nickname ||
+    !iv
+  ) {
+    // Exibe um erro caso os dados sejam insuficientes
+    console.error("Dados insuficientes");
+    return res.status(400).json({ error: "Dados insuficientes" });
+  }
+
+  // Descriptografar os dados
+  const dadosDescriptografadosNome = descriptografarDados(
+    nome_criptografado,
+    chave_nome,
+    Buffer.from(iv, "base64"),
+  );
+  const dadosDescriptografadosNickname = descriptografarDados(
+    nickname_criptografado,
+    chave_nickname,
+    Buffer.from(iv, "base64"),
+  );
+
+  // Verifica se a descriptografia foi bem-sucedida
+  if (!dadosDescriptografadosNome || !dadosDescriptografadosNickname) {
+    // Exibe um erro caso a descriptografia falhe
+    console.error("Erro ao descriptografar os dados");
+    return res.status(400).json({ error: "Erro ao descriptografar os dados" });
+  }
+
+  // Exibe os dados descriptografados para depuração
+  console.log("Dados descriptografados nome:", dadosDescriptografadosNome);
+  console.log(
+    "Dados descriptografados nickname:",
+    dadosDescriptografadosNickname,
+  );
+
+  // Insere os dados descriptografados no banco de dados
+  try {
+    // Cria uma consulta SQL para inserir os dados
+    const sql = "INSERT INTO nomes (nome, nickname) VALUES (?, ?)";
+    const params = [dadosDescriptografadosNome, dadosDescriptografadosNickname];
+
+    // Executa a consulta SQL
+    db.run(sql, params, function (err) {
+      if (err) {
+        // Exibe um erro caso o banco de dados não permita a inserção
+        console.error("Erro ao inserir dados no banco:", err.message);
+        return res.status(500).json({ error: err.message });
+      }
+      // Exibe o ID do registro inserido
+      console.log("Dados inseridos com sucesso. ID:", this.lastID);
+      // Retorna um JSON com o ID do registro e os dados descriptografados
+      res.status(201).json({
+        id: this.lastID,
+        nome: dadosDescriptografadosNome,
+        nickname: dadosDescriptografadosNickname,
+      });
+    });
+  } catch (error) {
+    // Exibe um erro caso haja um problema ao processar os dados
+    console.error("Erro ao processar os dados:", error.message);
+    return res.status(400).json({ error: "Erro ao processar os dados" });
+  }
 });
 
-/*
- *@description Pegar todos os dados cadastrados na tabela
- */
-app.get("/usuarios", (req, res) => {
-  const sql = "SELECT * FROM nomes";
+function descriptografarDados(dadosCriptografados, chaveBase64, ivBase64) {
+  try {
+    const chave = Buffer.from(chaveBase64, "base64");
+    const iv = Buffer.from(ivBase64, "base64");
 
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
+    if (chave.length !== 32) {
+      console.error(
+        "Comprimento da chave inválido. Deve ser 32 bytes (256 bits).",
+      );
+      return null;
     }
-    res.status(200).json(rows);
-  });
-});
 
-/*
- *@description Pesquisar usuarios cadastrados pelo id
- */
-app.get("/usuarios/:id", (req, res) => {
-  const { id } = req.params;
-  const sql = `SELECT * FROM nomes WHERE id = ${id}`;
+    const decipher = crypto.createDecipheriv("aes-256-cbc", chave, iv);
+    let dadosDescriptografados = decipher.update(
+      dadosCriptografados,
+      "base64",
+      "utf8",
+    );
+    dadosDescriptografados += decipher.final("utf8");
+    return dadosDescriptografados;
+  } catch (error) {
+    console.error("Erro ao descriptografar os dados:", error);
+    return null;
+  }
+}
 
-  db.get(sql, [], (err, row) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    if (!row) {
-      return res.status(404).json({ error: "Nome não encontrado" });
-    }
-    res.status(200).json(row);
-  });
-});
-
-/*
- *@descriptionPesquisar o último ID cadastrado na tabela "nomes"
+/**
+ *@description Pesquisar o último ID cadastrado na tabela "nomes"
  */
 app.get("/ultimo-id", (req, res) => {
   const sql = "SELECT id FROM nomes ORDER BY id DESC LIMIT 1";
@@ -113,61 +192,169 @@ app.get("/ultimo-id", (req, res) => {
   });
 });
 
-/*
+/**
  *@description Pesquisar um usuário(nickname) pelo último id cadastrado
  */
+// Rota GET criptografada
 app.get("/ultimo-nickname", (req, res) => {
-  const sql = "SELECT nickname FROM nomes ORDER BY id DESC LIMIT 1";
+  const sql = "SELECT nome, nickname FROM nomes ORDER BY id DESC LIMIT 1";
 
   db.get(sql, [], (err, row) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
     if (!row) {
-      return res.status(200).json({ nickname: null });
+      return res.status(200).json({ error: "Nenhum usuário encontrado" });
     }
-    res.status(200).json({ nickname: row.nickname });
+
+    // Gerar um IV aleatório
+    const iv = gerarIVAleatorio();
+
+    // Gerar chaves de criptografia de 32 bytes (256 bits)
+    const chaveNome = gerarChaveAleatoria(32);
+    const chaveNickname = gerarChaveAleatoria(32);
+
+    const dadosCriptografadosNome = criptografarDados(row.nome, chaveNome, iv);
+    const dadosCriptografadosNickname = criptografarDados(
+      row.nickname,
+      chaveNickname,
+      iv,
+    );
+
+    // Enviar os dados criptografados e o IV para o cliente
+    res.status(200).json({
+      nome_criptografado: dadosCriptografadosNome,
+      nickname_criptografado: dadosCriptografadosNickname,
+      iv: iv.toString("base64"),
+      chave_nome: chaveNome.toString("base64"),
+      chave_nickname: chaveNickname.toString("base64"),
+    });
   });
 });
+//Gerar chave aleatória
+function gerarChaveAleatoria(tamanho) {
+  const crypto = require("crypto");
+  return crypto.randomBytes(tamanho).toString("base64");
+}
 
-/*
- *@description Pesquisar um usuário(nome) pelo último id cadastrado
+//Função para criptografar os dados
+function criptografarDados(dados, chave, iv) {
+  const crypto = require("crypto");
+  const cipher = crypto.createCipheriv(
+    "aes-256-cbc",
+    Buffer.from(chave, "base64"),
+    Buffer.from(iv, "base64"),
+  );
+  let dadosCriptografados = cipher.update(dados, "utf8", "base64");
+  dadosCriptografados += cipher.final("base64");
+  return dadosCriptografados;
+}
+
+/**
+ *@description Atualizar um usuário
  */
-app.get("/ultimo-nome", (req, res) => {
-  const sql = "SELECT nome FROM nomes ORDER BY id DESC LIMIT 1";
+// Rota para atualizar usuário com dados criptografados
+app.put("/usuarios1/:id", (req, res) => {
+  // Exibe o corpo da requisição recebida
+  console.log("Corpo da requisição:", req.body);
 
-  db.get(sql, [], (err, row) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    if (!row) {
-      return res.status(200).json({ nome: null });
-    }
-    res.status(200).json({ nome: row.nome });
-  });
+  // Extrai os dados recebidos do corpo da requisição
+  const {
+    nome_criptografado,
+    nickname_criptografado,
+    chave_nome,
+    chave_nickname,
+    iv,
+  } = req.body;
+
+  // Extrai o ID do usuário da URL
+  const userId = req.params.id;
+
+  // Exibe os dados recebidos para depuração
+  console.log("Dados recebidos:");
+  console.log("Nome criptografado:", nome_criptografado);
+  console.log("Nickname criptografado:", nickname_criptografado);
+  console.log("Chave nome:", chave_nome);
+  console.log("Chave nickname:", chave_nickname);
+  console.log("IV:", iv);
+  console.log("ID do usuário:", userId);
+
+  // Verifica se os dados recebidos são insuficientes
+  if (
+    !nome_criptografado ||
+    !nickname_criptografado ||
+    !chave_nome ||
+    !chave_nickname ||
+    !iv
+  ) {
+    // Exibe um erro caso os dados sejam insuficientes
+    console.error("Dados insuficientes");
+    return res.status(400).json({ error: "Dados insuficientes" });
+  }
+
+  // Descriptografar os dados
+  const dadosDescriptografadosNome = descriptografarDados(
+    nome_criptografado,
+    chave_nome,
+    Buffer.from(iv, "base64"),
+  );
+  const dadosDescriptografadosNickname = descriptografarDados(
+    nickname_criptografado,
+    chave_nickname,
+    Buffer.from(iv, "base64"),
+  );
+
+  // Verifica se a descriptografia foi bem-sucedida
+  if (!dadosDescriptografadosNome || !dadosDescriptografadosNickname) {
+    // Exibe um erro caso a descriptografia falhe
+    console.error("Erro ao descriptografar os dados");
+    return res.status(400).json({ error: "Erro ao descriptografar os dados" });
+  }
+
+  // Exibe os dados descriptografados para depuração
+  console.log("Dados descriptografados nome:", dadosDescriptografadosNome);
+  console.log(
+    "Dados descriptografados nickname:",
+    dadosDescriptografadosNickname,
+  );
+
+  // Atualiza os dados descriptografados no banco de dados
+  try {
+    // Cria uma consulta SQL para atualizar os dados
+    const sql = "UPDATE nomes SET nome = ?, nickname = ? WHERE id = ?";
+    const params = [
+      dadosDescriptografadosNome,
+      dadosDescriptografadosNickname,
+      userId,
+    ];
+
+    // Executa a consulta SQL
+    db.run(sql, params, function (err) {
+      if (err) {
+        // Exibe um erro caso o banco de dados não permita a atualização
+        console.error("Erro ao atualizar dados no banco:", err.message);
+        return res.status(500).json({ error: err.message });
+      }
+      // Exibe o número de linhas afetadas pela atualização
+      console.log(
+        "Dados atualizados com sucesso. Linhas afetadas:",
+        this.changes,
+      );
+      // Retorna um JSON com o ID do registro e os dados descriptografados atualizados
+      res.status(200).json({
+        id: userId,
+        nome: dadosDescriptografadosNome,
+        nickname: dadosDescriptografadosNickname,
+      });
+    });
+  } catch (error) {
+    // Exibe um erro caso haja um problema ao processar os dados
+    console.error("Erro ao processar os dados:", error.message);
+    return res.status(400).json({ error: "Erro ao processar os dados" });
+  }
 });
 
-/*
- *@descriptionAtualizar um usuário
- */
-app.put("/usuarios/:id", (req, res) => {
-  const { id } = req.params;
-  const { nome, nickname } = req.body;
-  const sql = `UPDATE nomes SET nome = ?, nickname = ? WHERE id = ?`;
-  const params = [nome, nickname, id];
-
-  db.run(sql, params, function (err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    if (this.changes === 0) {
-      return res.status(404).json({ error: "Nome não encontrado" });
-    }
-    res.status(200).json({ id, nome, nickname });
-  });
-});
-
-/*
+/**
  *@description Deletar um usuário
  */
 app.delete("/usuarios/:id", (req, res) => {
@@ -186,8 +373,8 @@ app.delete("/usuarios/:id", (req, res) => {
   });
 });
 
-/*=========================================== Metodos Tabela Cores - CRUD =========================================*/
-/*
+/*========================================================================= Metodos Tabela Cores - CRUD ======================================================================================*/
+/**
  *@description Cadastrar cor
  */
 app.post("/usuarios/:id/cores", (req, res) => {
@@ -243,6 +430,21 @@ app.post("/usuarios/:id/cores", (req, res) => {
       cor_k,
       cor_l,
     });
+  });
+});
+
+/*
+ *@description Obter a lista de IDs cadastrados na tabela "nomes"
+ */
+app.get("/ids", (req, res) => {
+  const sql = "SELECT id FROM nomes";
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    const ids = rows.map((row) => row.id);
+    res.status(200).json(ids);
   });
 });
 

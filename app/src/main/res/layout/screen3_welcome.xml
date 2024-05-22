@@ -4,51 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cenario2">
+    android:background="@drawable/cenario25">
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="135dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="60dp"
         android:fontFamily="@font/poppins"
         android:onClick="onClick"
         android:text="Voltar"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:backgroundTint="#BE142A49"
+        android:textStyle="bold"
+        app:backgroundTint="#9F04357C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonCadastrart1"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
         android:id="@+id/buttonCadastrart1"
         android:layout_width="145dp"
         android:layout_height="65dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="60dp"
         android:fontFamily="@font/poppins"
         android:text="Continuar"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:backgroundTint="#BE142A49"
+        android:textStyle="bold"
+        app:backgroundTint="#9F04357C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
     <LinearLayout
         android:id="@+id/linearLayoutT2One"
         android:layout_width="383dp"
         android:layout_height="151dp"
-        android:background="#9F142A49"
+        android:background="#9F04357C"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutT2Two"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView"
@@ -61,7 +64,8 @@
             android:fontFamily="@font/poppins"
             android:text="Agora vamos começar testando seus conhecimentos relacionados as cores da coleta seletiva e o que elas representam."
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -70,11 +74,13 @@
         android:id="@+id/linearLayoutT2Two"
         android:layout_width="384dp"
         android:layout_height="38dp"
-        android:background="#9F142A49"
+        android:layout_marginTop="40dp"
+        android:background="#9F04357C"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutT2One"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
@@ -88,6 +94,7 @@
             android:text="Olá, "
             android:textColor="#FFFFFF"
             android:textSize="20sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="55dp"
             tools:layout_editor_absoluteY="146dp" />
 
@@ -106,7 +113,15 @@
 
     </LinearLayout>
 
-
+    <VideoView
+        android:id="@+id/videoViewWelcome"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="45dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutT2One" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

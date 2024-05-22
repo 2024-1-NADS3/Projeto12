@@ -20,7 +20,7 @@ public class screen12_endgame extends AppCompatActivity {
         buttonT11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(screen12_endgame.this, screen1_startgame.class);
+                Intent in = new Intent(screen12_endgame.this, screen1_startlogin.class);
                 startActivity(in);
             }
         });

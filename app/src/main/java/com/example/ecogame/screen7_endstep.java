@@ -4,35 +4,140 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
 public class screen7_endstep extends AppCompatActivity {
-    private Button botaoVoltar4;
-    private Button botaoContinuar4;
+    private Button S7buttonBackT4;
+    private Button S7buttonGoT4;
+    TextView S7textViewT4three;
+    private RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen7_endstep);
 
         //Navegaçãp
-        botaoVoltar4 = findViewById(R.id.buttonBack4);
+        S7buttonBackT4 = findViewById(R.id.S7buttonBackT4);
+        S7buttonGoT4 = findViewById(R.id.S7buttonGoT4);
+        S7textViewT4three = findViewById(R.id.S7textViewT4three);
 
-        botaoVoltar4.setOnClickListener(new View.OnClickListener() {
+        //Navigation system
+        S7buttonBackT4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(screen7_endstep.this, screen6_game3.class);
+                Intent in = new Intent(getApplicationContext(), screen5_endstep.class);
                 startActivity(in);
             }
         });
 
-        botaoContinuar4 = findViewById(R.id.buttonGo4);
-        botaoContinuar4.setOnClickListener(new View.OnClickListener() {
+        S7buttonGoT4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(screen7_endstep.this, screen8_video1.class);
+                Intent in = new Intent(getApplicationContext(), screen8_video1.class);
                 startActivity(in);
             }
         });
+
+        requestQueue = Volley.newRequestQueue(this);
+        consultarUltimoNickname();
+    }
+    // Função para descriptografar os dados enviados
+    public String descriptografarDados(String dadosCriptografados, String chaveBase64,
+                                       String ivBase64) {
+        try {
+            // Decodifica a chave e o IV de Base64 para bytes
+            byte[] chave = Base64.decode(chaveBase64, Base64.DEFAULT);
+            byte[] iv = Base64.decode(ivBase64, Base64.DEFAULT);
+
+            // Exibe a chave e o IV em logs para depuração
+            Log.d("Descriptografia get", new String(chave));
+            Log.d("IV get", new String(iv));
+
+            // Inicializa o objeto Cipher para descriptografia com o algoritmo AES/CBC/PKCS5PADDING
+            Cipher decipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+            decipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(chave, "AES"),
+                    new IvParameterSpec(iv));
+
+            // Descriptografa os dados criptografados
+            byte[] dadosDescriptografados = decipher.doFinal(Base64.decode(dadosCriptografados,
+                    Base64.DEFAULT));
+
+            // Converte os dados descriptografados de bytes para String
+            String dadosDescriptografadosString = new String(dadosDescriptografados, "UTF-8");
+
+            // Exibe os dados descriptografados em logs para depuração
+            Log.d("Dados Descriptografados", dadosDescriptografadosString);
+
+            // Retorna os dados descriptografados como uma String
+            return dadosDescriptografadosString;
+        } catch (Exception e) {
+            // Em caso de erro, imprime o stack trace e retorna null
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    // Rota GET para consultar o último nickname
+    private void consultarUltimoNickname() {
+        // URL da requisição GET para buscar o último nickname
+        String url = "https://6xrrfz-3000.csb.app/ultimo-nickname";
+
+        // Criação de uma requisição GET usando JsonObjectRequest
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            // Extrai os dados criptografados do nickname, IV e chave de
+                            // descriptografia do JSON de resposta
+                            String dadosCriptografadosNickname = response.getString(
+                                    "nickname_criptografado");
+                            String iv = response.getString("iv");
+                            String chaveNickname = response.getString("chave_nickname");
+
+                            // Descriptografa o nickname usando os dados recebidos
+                            String dadosDescriptografadosNickname = descriptografarDados(
+                                    dadosCriptografadosNickname, chaveNickname, iv
+                            );
+
+                            // Exibe o nickname descriptografado no textViewT4three se for bem-sucedido
+                            if (dadosDescriptografadosNickname != null) {
+                                S7textViewT4three.setText(dadosDescriptografadosNickname);
+                            } else {
+                                S7textViewT4three.setText("Não há nenhum nickname cadastrado.");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Exibe uma mensagem de erro no textViewT4three em caso de falha na requisição
+                        S7textViewT4three.setText("Erro ao consultar o último nickname.");
+                    }
+                });
+
+        // Adiciona a requisição à fila de requisições
+        requestQueue.add(request);
     }
 }

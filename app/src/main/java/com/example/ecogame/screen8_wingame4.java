@@ -19,7 +19,7 @@ public class screen8_wingame4 extends Activity {
         botaoContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(screen8_wingame4.this, screen7_endstep.class);
+                Intent in = new Intent(screen8_wingame4.this, screen13_rank.class);
                 startActivity(in);
             }
         });

@@ -5,18 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen4_game2"
-    android:background="@drawable/cenario17">
+    android:background="@drawable/cenario7">
+
+    <ImageButton
+        android:id="@+id/imageButtonS4Game3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:backgroundTint="#65102073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
     <TextView
         android:id="@+id/textView1S4Game2"
         android:layout_width="389dp"
         android:layout_height="139dp"
+        android:layout_marginTop="50dp"
         android:background="#9F04357C"
         android:fontFamily="@font/poppins"
-        android:text="Selecione a cor que melhor represente os coletores e lixeiras para coleta seletiva de PLÁSTICO ."
+        android:text="Selecione a cor que melhor represente os coletores e lixeiras para coleta seletiva de MADEIRA ."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:textStyle="bold"
         android:typeface="sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,36 +40,28 @@
     <Button
         android:id="@+id/buttonRedS4Game2"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="174dp"
-        android:layout_height="111dp"
+        android:layout_width="175dp"
+        android:layout_height="110dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="384dp"
+        android:layout_marginTop="36dp"
         app:backgroundTint="#FF0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1S4Game2"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1S4Game2" />
 
     <Button
         android:id="@+id/buttonBackS4Game2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins"
         android:text="Voltar"
-        android:textColor="#34CB79"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:backgroundTint="#00142A49"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:backgroundTint="#65102073"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonOrangeS4Game2"
-        app:layout_constraintVertical_bias="0.0"
-        app:rippleColor="#34CB79" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonYellowS4Game2"
@@ -64,11 +69,10 @@
         android:layout_width="175dp"
         android:layout_height="112dp"
         android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:backgroundTint="#FFFF00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
-        app:layout_constraintStart_toEndOf="@+id/buttonRedS4Game2"
         app:layout_constraintTop_toBottomOf="@+id/textView1S4Game2" />
 
     <Button
@@ -76,7 +80,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="174dp"
         android:layout_height="111dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:backgroundTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +102,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="174dp"
         android:layout_height="111dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:backgroundTint="#4169E1"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +115,7 @@
         android:layout_height="111dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:backgroundTint="#FFA500"
+        app:backgroundTint="#FF9800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGreenS4Game2" />
 

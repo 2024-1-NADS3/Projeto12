@@ -14,12 +14,12 @@ public class screen8_wingame1 extends Activity {
         setContentView(R.layout.screen8_wingame1);
 
         //Navegaçãp
-        botaoContinuar = findViewById(R.id.buttonGo6S8GameWin1);
+        botaoContinuar = findViewById(R.id.buttonGoS8Win1);
 
         botaoContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(screen8_wingame1.this, screen7_endstep.class);
+                Intent in = new Intent(screen8_wingame1.this, screen8_video2.class);
                 startActivity(in);
             }
         });

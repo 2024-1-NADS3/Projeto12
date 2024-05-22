@@ -7,12 +7,40 @@
     android:background="@drawable/cenario14"
     tools:context=".screen8_video1">
 
+    <ImageButton
+        android:id="@+id/imageButtonS8Video1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:backgroundTint="#9FFFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <Button
+        android:id="@+id/buttonBackS8Video1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Voltar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#9F04357C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="331dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="340dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:background="#9F04357C"
         android:fontFamily="@font/poppins"
         android:text="Assista o vídeo abaixo e responda os desafios."
         android:textAlignment="center"
@@ -23,41 +51,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <VideoView
-        android:id="@+id/videoView1"
-        android:layout_width="339dp"
-        android:layout_height="252dp"
-        android:layout_marginTop="188dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
-        android:id="@+id/buttonGo5"
+        android:id="@+id/buttonGoS8b5"
         style="@style/Widget.Material3.Button.ElevatedButton.Icon"
         android:layout_width="207dp"
         android:layout_height="60dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="420dp"
+        android:background="#FFC107"
         android:fontFamily="@font/poppins"
         android:text="Continuar"
         android:textAlignment="center"
         android:textColor="#F6F6F6"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:backgroundTint="#DC142A49"
+        app:backgroundTint="#FFC107"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-    <Button
-        android:id="@+id/buttonBack5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Voltar"
-        android:textColor="#34CB79"
-        app:backgroundTint="#DC142A49"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="340dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.android.volley.AuthFailureError;
@@ -30,6 +32,8 @@ public class screen8_game1 extends AppCompatActivity {
     private ImageView garbageGreen;
     private ImageView garbageMarron;
     private ImageView garbageWhite;
+    private ImageButton imageButtonS8Game1;
+    private Button buttonBackS8Game3;
     private int userId = -1;
 
     @Override
@@ -37,10 +41,10 @@ public class screen8_game1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen8_game1);
 
-        garbageRed = findViewById(R.id.garbageRed2S8Game1);
-        garbageGreen = findViewById(R.id.garbageGreen2S8Game1);
-        garbageMarron = findViewById(R.id.garbageMarron2S8Game1);
-        garbageWhite = findViewById(R.id.garbageWhite2S8Game1);
+        garbageRed = findViewById(R.id.garbageRedS8Game1);
+        garbageGreen = findViewById(R.id.garbageGreenS8Game1);
+        garbageMarron = findViewById(R.id.garbageMarronS8Game1);
+        garbageWhite = findViewById(R.id.garbageWhiteS8Game1);
 
         consultarUltimoId();
 
@@ -48,7 +52,7 @@ public class screen8_game1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveFalse(userId, false);
-                Intent in = new Intent(screen8_game1.this, screen4_lostgame1.class);
+                Intent in = new Intent(getApplicationContext(), screen8_lostgame1.class);
                 startActivity(in);
             }
         });
@@ -56,7 +60,7 @@ public class screen8_game1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveFalse(userId, false);
-                Intent in = new Intent(screen8_game1.this, screen4_lostgame1.class);
+                Intent in = new Intent(getApplicationContext(), screen8_lostgame1.class);
                 startActivity(in);
             }
         });
@@ -64,7 +68,7 @@ public class screen8_game1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveFalse(userId, false);
-                Intent in = new Intent(screen8_game1.this, screen4_lostgame1.class);
+                Intent in = new Intent(getApplicationContext(), screen8_lostgame1.class);
                 startActivity(in);
             }
         });
@@ -72,14 +76,32 @@ public class screen8_game1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveFalse(userId, true);
-                Intent in = new Intent(screen8_game1.this, screen11_certificate.class);
+                Intent in = new Intent(getApplicationContext(), screen8_wingame1.class);
+                startActivity(in);
+            }
+        });
+        //Return to the beginning of the level/stage
+        buttonBackS8Game3 = findViewById(R.id.buttonBackS8Game3);
+        buttonBackS8Game3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(screen8_game1.this, screen8_video1.class);
+                startActivity(in);
+            }
+        });
+        //Return to the beginning of the level/stage
+        imageButtonS8Game1 = findViewById(R.id.imageButtonS8Game1);
+        imageButtonS8Game1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(screen8_game1.this, screen7_endstep.class);
                 startActivity(in);
             }
         });
     }
     // Função para consultar e salvar o último ID cadastrado na tabela "nomes"
     private void consultarUltimoId() {
-        String url = "https://nnn5h2-3000.csb.app/ultimo-id";
+        String url = "https://6xrrfz-3000.csb.app/ultimo-id";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -106,7 +128,7 @@ public class screen8_game1 extends AppCompatActivity {
     // Método para contabilizar "falso" no banco de dados
     private void saveFalse(int userId, boolean corI) {
         // URL para enviar a solicitação POST para o servidor
-        String url = "https://nnn5h2-3000.csb.app/usuarios/" + userId + "/cores";
+        String url = "https://6xrrfz-3000.csb.app/usuarios/" + userId + "/cores";
 
         // Objeto JSON com os dados a serem enviados
         JSONObject json = new JSONObject();
@@ -157,7 +179,7 @@ public class screen8_game1 extends AppCompatActivity {
     // Método para contabilizar "verdadeiro" no banco de dados
     private void saveTrue(int userId, boolean corI) {
         // Constrói o URL para enviar a solicitação POST para o servidor
-        String url = "https://nnn5h2-3000.csb.app/usuarios/" + userId + "/cores";
+        String url = "https://6xrrfz-3000.csb.app/usuarios/" + userId + "/cores";
 
         // Cria um objeto JSON com os dados a serem enviados
         JSONObject json = new JSONObject();

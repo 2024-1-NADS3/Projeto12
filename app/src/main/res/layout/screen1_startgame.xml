@@ -4,67 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cenario3"
+    android:background="@drawable/cenario123"
     android:visibility="visible"
     tools:context=".screen1_startgame">
 
     <Button
         android:id="@+id/buttonStart"
         style="@style/TextAppearance.Material3.BodyMedium"
-        android:layout_width="363dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="116dp"
+        android:layout_width="353dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="152dp"
         android:onClick="onClick"
-        android:text="Começar"
+        android:text="COMEÇAR"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:backgroundTint="#37773A"
+        app:backgroundTint="#04B50B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
 
     <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
 
     <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
 
     <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
 
     <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="410dp"
-        android:layout_height="204dp"
-        android:rotation="-6"
-        android:rotationX="4"
-        android:rotationY="-6"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404"
-        app:srcCompat="@drawable/cenario4" />
+        app:srcCompat="@drawable/logotransparente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

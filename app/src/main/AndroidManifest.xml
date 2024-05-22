@@ -19,6 +19,12 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".screen13_rank"
+            android:exported="false" />
+        <activity
+            android:name=".screen1_startlogin"
+            android:exported="false" />
+        <activity
             android:name=".screen6_game1"
             android:exported="false" />
         <activity
@@ -139,13 +145,16 @@
             android:name=".screen8_video1"
             android:exported="false" />
         <activity
+            android:name=".screen8_video2"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_video3"
+            android:exported="false" />
+        <activity
+            android:name=".screen8_video4"
+            android:exported="false" />
+        <activity
             android:name=".screen7_endstep"
-            android:exported="false" />
-        <activity
-            android:name=".screen6_game3"
-            android:exported="false" />
-        <activity
-            android:name=".screen6_game2"
             android:exported="false" />
         <activity
             android:name=".screen4_wingame1"

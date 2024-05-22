@@ -17,7 +17,7 @@ public class screen6_wingame1 extends AppCompatActivity {
 
         //Navigation system
         //Move on to the next challenge
-        botaoContinuar6 = findViewById(R.id.buttonGo6S6Win1);
+        botaoContinuar6 = findViewById(R.id.buttonGoS6Win2);
         botaoContinuar6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,85 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/green5"
+    android:background="@drawable/red4"
     tools:context=".screen4_wingame4">
 
     <TextView
-        android:id="@+id/textView1S4Win4"
+        android:id="@+id/textView1S4Win1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/poppins"
-        android:text="Parabéns, você sabe muito!! "
+        android:text="Parabéns, você acertou! "
         android:textAlignment="center"
-        android:textColor="#042D5A"
-        android:textSize="20sp"
+        android:textColor="#D30303"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2S4Win4"
-        android:layout_width="367dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="12dp"
+        android:id="@+id/textView2S4Win1"
+        android:layout_width="369dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="48dp"
         android:background="#A6FFFFFF"
         android:fontFamily="@font/poppins"
-        android:text="A cor vermelha é utilizada para representar os coletores de resíduos de plástico devido à padronização das cores da coleta seletiva. "
+        android:text="No México, empresas se uniram para criar um projeto para salvar abelhas da espécie Apis Mellifera (a mais importante do mundo para alimentação humana) eles utilizaram canudos plásticos para criar favos de mel artificiais e, com isso, proteger as abelhas ameaçadas de extinção."
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1S4Win4" />
-
-    <TextView
-        android:id="@+id/textView3S4Win4"
-        android:layout_width="357dp"
-        android:layout_height="203dp"
-        android:layout_marginTop="24dp"
-        android:background="#A6FFFFFF"
-        android:fontFamily="@font/poppins"
-        android:text="Cada cor em um recipiente de coleta seletiva corresponde a um tipo específico de resíduo, facilitando a separação e reciclagem adequada dos materiais. No caso do vermelho, ele é associado ao plástico, indicando que esse recipiente é destinado para o descarte desse tipo de material."
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2S4Win4" />
-
-    <TextView
-        android:id="@+id/textView4S4Win4"
-        android:layout_width="362dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="16dp"
-        android:background="#A6FFFFFF"
-        android:fontFamily="@font/poppins"
-        android:text="Vamos seguir testando seus conhecimentos na próxima etapa."
-        android:textAlignment="center"
-        android:textColor="#0B0909"
-        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3S4Win4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1S4Win1" />
 
     <Button
-        android:id="@+id/buttonGoS4Win4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:id="@+id/buttonGoS6Win4"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="132dp"
         android:onClick="onClick"
         android:text="Próximo"
-        android:textColor="#34CB79"
-        android:textSize="16sp"
-        app:backgroundTint="#142A49"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#C80202"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4S4Win4" />
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

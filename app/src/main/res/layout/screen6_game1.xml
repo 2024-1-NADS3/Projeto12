@@ -3,8 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cenario11">
+    android:background="@drawable/cenario234">
 
+    <ImageButton
+        android:id="@+id/imageButtonS6Game1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:backgroundTint="#65102073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
     <LinearLayout
         android:id="@+id/principalS6Game1"
@@ -18,8 +28,8 @@
         <ImageView
             android:id="@+id/petS6Game1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/bottle" />
+            android:layout_height="229dp"
+            app:srcCompat="@drawable/lixohospitalarseringa" />
     </LinearLayout>
 
     <LinearLayout
@@ -27,7 +37,7 @@
         android:layout_width="155dp"
         android:layout_height="155dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="20dp"
         android:background="#00142A49">
 
@@ -35,7 +45,7 @@
             android:id="@+id/imageView3S6Game1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/brown_garbage_collector" />
+            app:srcCompat="@drawable/red_garbage_collector" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,7 +53,7 @@
         android:layout_width="155dp"
         android:layout_height="155dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="195dp"
+        android:layout_marginTop="215dp"
         android:layout_marginRight="20dp"
         android:background="#00142A49">
 
@@ -59,7 +69,7 @@
         android:layout_width="155dp"
         android:layout_height="155dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="375dp"
+        android:layout_marginTop="395dp"
         android:layout_marginRight="20dp"
         android:background="#00142A49">
 
@@ -67,7 +77,7 @@
             android:id="@+id/imageView5S6Game1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/red_garbage_collector" />
+            app:srcCompat="@drawable/purple_garbage_collector" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +85,7 @@
         android:layout_width="155dp"
         android:layout_height="155dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="555dp"
+        android:layout_marginTop="575dp"
         android:layout_marginRight="20dp"
         android:background="#00142A49">
 

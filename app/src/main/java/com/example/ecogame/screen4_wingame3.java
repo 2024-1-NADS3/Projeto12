@@ -17,7 +17,7 @@ public class screen4_wingame3 extends AppCompatActivity {
 
         //Navigation system
         //Move on to the next challenge
-        botaoContinuar3 = findViewById(R.id.buttonGoS4Win3);
+        botaoContinuar3 = findViewById(R.id.buttonGoS6Win4);
         botaoContinuar3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,19 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cenario21"
+    android:background="@drawable/cenario31"
     tools:context=".screen8_game1">
+
+    <ImageButton
+        android:id="@+id/imageButtonS8Game1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:backgroundTint="#9F04357C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <Button
+        android:id="@+id/buttonBackS8Game3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Voltar"
+        android:textColor="#FAFAFA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#9F04357C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView16S8Game1"
-        android:layout_width="355dp"
-        android:layout_height="186dp"
-        android:layout_marginTop="52dp"
-        android:background="#92C6C6C6"
+        android:layout_width="375dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="100dp"
+        android:background="#9F04357C"
         android:fontFamily="@font/poppins"
-        android:text="De acordo com as informações apresentadas no vídeo, selecione o melhor destino para os coletores de plástico."
+        android:text="De acordo com as informações apresentadas no vídeo, qual desses itens deve ser jogado na lixeira ROXA? "
         android:textAlignment="center"
-        android:textColor="#0B0000"
+        android:textColor="#FDFDFD"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,42 +50,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/garbageMarron2S8Game1"
-        android:layout_width="115dp"
-        android:layout_height="134dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="320dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/brown_garbage_collector" />
-
-    <ImageView
-        android:id="@+id/garbageGreen2S8Game1"
-        android:layout_width="117dp"
-        android:layout_height="131dp"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="68dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/green_garbage_collector" />
-
-    <ImageView
-        android:id="@+id/garbageRed2S8Game1"
-        android:layout_width="118dp"
-        android:layout_height="127dp"
-        android:layout_marginStart="64dp"
+        android:id="@+id/garbageMarronS8Game1"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/garbageMarron2S8Game1"
-        app:srcCompat="@drawable/red_garbage_collector" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16S8Game1"
+        app:srcCompat="@drawable/pizza" />
 
     <ImageView
-        android:id="@+id/garbageWhite2S8Game1"
-        android:layout_width="102dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="72dp"
+        android:id="@+id/garbageGreenS8Game1"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/garbageGreen2S8Game1"
-        app:srcCompat="@drawable/white_garbage_collector" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16S8Game1"
+        app:srcCompat="@drawable/embalagem" />
+
+    <ImageView
+        android:id="@+id/garbageRedS8Game1"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garbageMarronS8Game1"
+        app:srcCompat="@drawable/pilha" />
+
+    <ImageView
+        android:id="@+id/garbageWhiteS8Game1"
+        android:layout_width="117dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garbageGreenS8Game1"
+        app:srcCompat="@drawable/radiografia" />
 </androidx.constraintlayout.widget.ConstraintLayout>

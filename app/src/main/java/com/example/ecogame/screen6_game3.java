@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -38,6 +39,7 @@ public class screen6_game3 extends AppCompatActivity {
     private View imageView4;
     private View imageView5;
     private View imageView6;
+    private ImageButton imageButtonS6Game3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,15 @@ public class screen6_game3 extends AppCompatActivity {
         findViewById(R.id.bottomrightS6Game3).setOnDragListener(new MyOnDragListener(4));
 
         white = findViewById(R.id.bottomrightS6Game3);
+        //Return to the beginning of the level/stage
+        imageButtonS6Game3 = findViewById(R.id.imageButtonS6Game3);
+        imageButtonS6Game3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(screen6_game3.this, screen5_endstep.class);
+                startActivity(in);
+            }
+        });
         consultarUltimoId();
     }
 
@@ -92,7 +103,7 @@ public class screen6_game3 extends AppCompatActivity {
                 case DragEvent.ACTION_DRAG_ENTERED:
 
                     Log.i("Script", num + " - ACTION_DRAG_ENTERED");
-                    v.setBackgroundColor(Color.rgb(20, 42, 73));
+                    //v.setBackgroundColor(Color.rgb(20, 42, 73));
 
                     // Verifique se o item arrastado é um ImageView
                     View draggedView = (View) event.getLocalState();
@@ -109,17 +120,23 @@ public class screen6_game3 extends AppCompatActivity {
                                         screen6_lostgame3.class);
                                 startActivity(intent);
                             } else if (v.getId() == R.id.toprightS6Game3) {
-                                //Correct option
-                                saveFalse(userId, true);
-                                Intent intent = new Intent(screen6_game3.this,
-                                        screen6_wingame3.class);
-                                startActivity(intent);
-                            } else if (v.getId() == R.id.bottomleftS6Game3) {
                                 //Incorrect option
                                 saveFalse(userId, false);
                                 Intent intent = new Intent(screen6_game3.this,
                                         screen6_lostgame3.class);
                                 startActivity(intent);
+
+                            } else if (v.getId() == R.id.bottomleftS6Game3) {
+                                //Correct option
+                                saveFalse(userId, true);
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Intent intent = new Intent(screen6_game3.this,
+                                                screen6_wingame3.class);
+                                        startActivity(intent);
+                                    }
+                                }, 1000); // Atraso de 1 segundo (1000 milissegundos)
                             } else if (v.getId() == R.id.bottomrightS6Game3) {
                                 //Incorrect option
                                 saveFalse(userId, false);
@@ -135,7 +152,7 @@ public class screen6_game3 extends AppCompatActivity {
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
                     Log.i("Script", num + " - ACTION_DRAG_EXITED");
-                    v.setBackgroundColor(Color.rgb(255, 255, 255));
+                    //v.setBackgroundColor(Color.rgb(255, 255, 255));
                     break;
                 case DragEvent.ACTION_DROP:
                     Log.i("Script", num + " - ACTION_DROP");
@@ -148,10 +165,8 @@ public class screen6_game3 extends AppCompatActivity {
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
                     Log.i("Script", num + " - ACTION_DRAG_ENDED");
-                    v.setBackgroundColor(Color.rgb(255, 255, 255));
-
+                    //v.setBackgroundColor(Color.rgb(255, 255, 255));
                     break;
-
             }
             return true;
         }
@@ -159,7 +174,7 @@ public class screen6_game3 extends AppCompatActivity {
 
     // Função para consultar e salvar o último ID cadastrado na tabela "nomes"
     private void consultarUltimoId() {
-        String url = "https://nnn5h2-3000.csb.app/ultimo-id";
+        String url = "https://6xrrfz-3000.csb.app/ultimo-id";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -189,7 +204,7 @@ public class screen6_game3 extends AppCompatActivity {
     // Método para contabilizar "falso" no banco de dados
     private void saveFalse(int userId, boolean corG) {
         // URL para enviar a solicitação POST para o servidor
-        String url = "https://nnn5h2-3000.csb.app/usuarios/" + userId + "/cores";
+        String url = "https://6xrrfz-3000.csb.app/usuarios/" + userId + "/cores";
 
         // Objeto JSON com os dados a serem enviados
         JSONObject json = new JSONObject();
@@ -240,7 +255,7 @@ public class screen6_game3 extends AppCompatActivity {
     // Método para contabilizar "verdadeiro" no banco de dados
     private void saveTrue(int userId, boolean corG) {
         // Constrói o URL para enviar a solicitação POST para o servidor
-        String url = "https://nnn5h2-3000.csb.app/usuarios/" + userId + "/cores";
+        String url = "https://6xrrfz-3000.csb.app/usuarios/" + userId + "/cores";
 
         // Cria um objeto JSON com os dados a serem enviados
         JSONObject json = new JSONObject();
