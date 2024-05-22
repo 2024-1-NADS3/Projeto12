@@ -5,9 +5,9 @@
 </p>
 
 # EcoIA - Games
-</br>
+
 ## Grupo 12
-</br>
+
 ## Integrantes: <a href="/">Guilherme Medeiros</a>, <a href="/">Lorena Bernardo</a>, <a href="/">Matheus Duarte</a>, <a href="/">Paulo Carvalho</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente</a>,<a href="https://github.com/VictorRosetti">Victor Rosetti</a>
