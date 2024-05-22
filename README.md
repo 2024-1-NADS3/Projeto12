@@ -13,19 +13,19 @@
 
 <b> Integrantes: </b>
 
-<a href="/">Guilherme</a>
+<a href="/">Guilherme Medeiros</a>
 <br>
-<a href="/">Lorena</a>
+<a href="/">Lorena Bernardo</a>
 <br>
-<a href="/">Matheus</a>
+<a href="/">Matheus Sampaio</a>
 <br>
-<a href="">Paulo Carvalho</a>
+<a href="/">Paulo Carvalho</a>
 
 ## Professores Orientadores:
 
 <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente</a>
 <br>
-<a href="/">Victor Rosetti</a>
+<a href="https://github.com/VictorRosetti">Victor Rosetti</a>
 
 ## 💬 Descrição do Projeto
 
@@ -34,26 +34,25 @@
 -
 </p>
 
-O projeto Eco IA Game tem a missão de, por meio da gameficação, ajudar na transformação da de comportamento da sociedade, por meio da concientização de crianças e pré adolescentes. Nosso aplicativo possui o objetivo de maximizar a disseminação de informações referentes a reciclagem e o impacto das mudanças climáticas no meio ambiente, fazendo com que o mesmo possa alcançar uma maior visibilidade em prol da causa.
+O projeto Eco IA Game tem a missão de, por meio da gameficação, ajudar na transformação de comportamento da sociedade, por meio da concientização de crianças e pré adolescentes. Nosso aplicativo possui o objetivo de maximizar a disseminação de informações referentes a reciclagem e o impacto das mudanças climáticas no meio ambiente, fazendo com que o mesmo possa alcançar uma maior visibilidade em prol da causa.
 
 ## 🛠️ Desenvolvimento
 
 <b>Front-end</b>
 
-- Android Studio; e 
-- Figma.
+- Android Studio: Ferramenta para codificação e desenvolvimento de aplicativos para a o sistema operacional Android.
+- Figma: Ferramenta para podelagem e prototipagem de designs em geral.
 
 <b>Back-end</b>
 
 - Android Studio: Ferramenta para codificação e desenvolvimento de aplicativos para a o sistema operacional Android.
-- SQLite: Banco de dados.
-- Codesandbox: Servidor.
+- Codesandbox: Ferramenta de codificação online.
 
 <b>UX/UI Design</b>
 
 <a href="https://www.figma.com/file/VpLBbIkSAuBErivsno4sY3?node-id=0:1&locale=en&type=design">Protótipo</a>
 <br>
-<a href="/">Wireframe - Precisa incluir o link</a>
+<a href="https://github.com/2024-1-NADS3/Projeto12/tree/main">Atividades</a>
 <br>
 
 ## 💻 Configuração para Desenvolvimento
@@ -61,7 +60,18 @@ O projeto Eco IA Game tem a missão de, por meio da gameficação, ajudar na tra
 1- Para abrir este projeto você necessita fazer a instalção das seguintes ferramentas:
 
 - <a href="https://developer.android.com/studio?gad_source=1&gclid=Cj0KCQjw2uiwBhCXARIsACMvIU1GVQCo_wPJf2YdcSfEj22uxcBZSt8uQJVw6qJXkUsINjMRQcwj_ScaAsvwEALw_wcB&gclsrc=aw.ds&hl=pt-br">Android Studio Iguana | 2023.2.1</a><br> 
-- <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java version "17.0.1" 2021-10-19 LTS</a><br> 
+- <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java version "17.0.1" 2021-10-19 LTS</a><br>
+
+2- Para abrir o servidos deste projeto você necessita fazer a instalção das seguintes ferramentas:
+- <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">NodeJS v16.13.0</a><br>
+--> Pode ser necessário realizar a instalação das seguintes dependências:
+  --> npm install express
+  --> npm install body-parser
+  --> npm install body-parser
+  --> npm install nodemailer
+  -->npm install sqlite3
+  --> npm install crypto
+  --> npm install dotenv
 
 <b>Outras configurações</b>
 
