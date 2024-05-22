@@ -16,25 +16,25 @@
 <p align="center">
 <img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/app/src/main/res/drawable/logotransparente.png?raw=true" alt="WWC" border="0"  width="350px" height="275px"></p>
 <br>
-<b>Eco-ia Game: Aventura da Reciclagem para Crianças!</b>
+<b>Eco-ia Game: Aventura da Reciclagem para Crianças!</b> <br>
 Embarque em uma jornada emocionante pelo mundo da reciclagem com o Eco-ia Game, um jogo educativo e divertido projetado especialmente para rianças!
 <br>
-<b>Desvende o Mundo da Reciclagem:</b>b>
+<b>Desvende o Mundo da Reciclagem:</b> <br>
 No Eco-ia Game, as crianças exploram um mundo colorido e interativo, onde aprendem sobre a importância da reciclagem e como ela ajuda a proteger o meio ambiente. Com desafios empolgantes, a diversão e o aprendizado andam de mãos dadas.
 <br>
-<b>Mini Games Divertidos e Educativos:</b>
-• Desafio das Lixeiras: Teste seus conhecimentos sobre reciclagem separando o lixo corretamente nas lixeiras coloridas.
-• Trilha Ecológica: Escolha o lixo e descubra qual é a lixeira correta, para ganhar pontos e aprender mais sobre os tipos de reciclagem que existem!
+<b>Mini Games Divertidos e Educativos:</b> <br>
+• Desafio das Lixeiras: Teste seus conhecimentos sobre reciclagem separando o lixo corretamente nas lixeiras coloridas. <br>
+• Trilha Ecológica: Escolha o lixo e descubra qual é a lixeira correta, para ganhar pontos e aprender mais sobre os tipos de reciclagem que existem! <br>
 • Desafio do Vídeo: Assista os vídeos e responda as perguntas para ajudar a limpar o meio ambiente e proteger os animais.
-<b>Recursos Interativos:</b>b>
-• Gráficos Coloridos e Animados: Explore um mundo vibrante e cheio de vida, com cenários e personagens encantadores.
-• Trilha Sonora Divertida: Curta músicas animadas e efeitos sonoros divertidos que tornam a experiência ainda mais empolgante.
+<b>Recursos Interativos:</b> <br>
+• Gráficos Coloridos e Animados: Explore um mundo vibrante e cheio de vida, com cenários e personagens encantadores. <br>
+• Trilha Sonora Divertida: Curta músicas animadas e efeitos sonoros divertidos que tornam a experiência ainda mais empolgante. <br>
 • Sistema de Recompensas: Ganhe recompensas e alcance o top 1 no ranking global.
 <br>
-<b></b>Aprendizado e Diversão em um Só Lugar:</b>
+<b></b>Aprendizado e Diversão em um Só Lugar:</b> <br>
 O Eco-ia Game oferece uma experiência completa de aprendizado e diversão, incentivando as crianças a se tornarem verdadeiros defensores do meio ambiente. Com uma abordagem lúdica e interativa, o jogo desperta a consciência ambiental e promove a adoção de hábitos sustentáveis desde cedo.
 <br>
-<b>Junte-se à Aventura da Reciclagem!</b>
+<b>Junte-se à Aventura da Reciclagem!</b> <br>
 Baixe agora o Eco-ia Game e embarque nessa jornada emocionante rumo a um futuro mais verde e sustentável!
 
 ## 🛠️ Desenvolvimento
