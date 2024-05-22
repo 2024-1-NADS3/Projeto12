@@ -31,7 +31,7 @@ No Eco-ia Game, as crianças exploram um mundo colorido e interativo, onde apren
 • Trilha Sonora Divertida: Curta músicas animadas e efeitos sonoros divertidos que tornam a experiência ainda mais empolgante. <br>
 • Sistema de Recompensas: Ganhe recompensas e alcance o top 1 no ranking global.
 <br>
-<b></b>Aprendizado e Diversão em um Só Lugar:</b> <br>
+<b>Aprendizado e Diversão em um Só Lugar:</b> <br>
 O Eco-ia Game oferece uma experiência completa de aprendizado e diversão, incentivando as crianças a se tornarem verdadeiros defensores do meio ambiente. Com uma abordagem lúdica e interativa, o jogo desperta a consciência ambiental e promove a adoção de hábitos sustentáveis desde cedo.
 <br>
 <b>Junte-se à Aventura da Reciclagem!</b> <br>
