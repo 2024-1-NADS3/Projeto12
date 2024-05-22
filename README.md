@@ -49,12 +49,6 @@ Baixe agora o Eco-ia Game e embarque nessa jornada emocionante rumo a um futuro 
 - Android Studio: Ferramenta para codificação e desenvolvimento de aplicativos para a o sistema operacional Android.
 - Codesandbox: Ferramenta de codificação online.
 
-<b>UX/UI Design</b>
-
-<a href="https://www.figma.com/file/VpLBbIkSAuBErivsno4sY3?node-id=0:1&locale=en&type=design">Protótipo</a>
-<br>
-<a href="https://github.com/2024-1-NADS3/Projeto12/tree/main">Atividades</a>
-<br>
 
 ## 💻 Configuração para Desenvolvimento
 
@@ -65,6 +59,14 @@ Baixe agora o Eco-ia Game e embarque nessa jornada emocionante rumo a um futuro 
 
 2- Para abrir o servidos deste projeto você necessita fazer a instalção das seguintes ferramentas:
 - <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">NodeJS v16.13.0</a><br>
+```
+npm install express
+npm install body-parser
+npm install nodemailer
+npm install sqlite3
+npm install crypto
+npm install dotenv
+```
 --> Pode ser necessário realizar a instalação das seguintes dependências:
   --> npm install express
   --> npm install body-parser
