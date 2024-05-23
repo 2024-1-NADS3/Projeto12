@@ -17,7 +17,7 @@
 <img src="https://github.com/2024-1-NADS3/Projeto12/blob/main/img/icon.jpg?raw=true" alt="WWC" border="0"  width="350px" height="275px"></p>
 <br>
 <b>Eco-ia Game: Aventura da Reciclagem para Crianças!</b> <br>
-Embarque em uma jornada emocionante pelo mundo da reciclagem com o Eco-ia Game, um jogo educativo e divertido projetado especialmente para rianças!
+Embarque em uma jornada emocionante pelo mundo da reciclagem com o Eco-ia Game, um jogo educativo e divertido projetado especialmente para crianças!
 <br>
 <b>Desvende o Mundo da Reciclagem:</b> <br>
 No Eco-ia Game, as crianças exploram um mundo colorido e interativo, onde aprendem sobre a importância da reciclagem e como ela ajuda a proteger o meio ambiente. Com desafios empolgantes, a diversão e o aprendizado andam de mãos dadas.
