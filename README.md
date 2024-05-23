@@ -82,7 +82,8 @@ npm install dotenv
 - 0.1.1 - 30/02/2024
   - ATUALIZAÇÃO: Páginas (front/design) no android studio finalizadas e revisadas.
 - 0.2.0 - 15/03/2024
-  - Back-end: programação das páginas no android studio (Java);
+  - Front-end: programação das páginas no android studio (Java);
+  - Back-end: programação do servidor NODE JS (CodeSandBox);
 - 0.2.1 - 30/03/2024
   - Teste: Back-end.
 - 0.3.0 - 15/04/2024
