@@ -93,8 +93,9 @@ npm install dotenv
   - Documentação acadêmica.
 - 0.3.1 - 15/05/2024
   - Revisão e finalização do aplicativo.
-- 0.3.1 - 15/05/2024
+- 0.3.1 - 22/05/2024
   - Trabalho finalizado.
+  - Publicação do App na Google Play Store.
     
 ## 🛠 Estrutura de pastas
 
